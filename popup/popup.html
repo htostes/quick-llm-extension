@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 LLM Settings</title>
+  <style>
+    :root {
+      --bg-color: #1f1f1f;
+      --panel-color: #2a2a2a;
+      --text-color: #e5e5e5;
+      --label-color: #cfcfcf;
+      --input-bg: #333333;
+      --input-border: #444;
+      --button-bg: #4f46e5;
+      --button-hover-bg: #4338ca;
+      --success-color: #34d399;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      padding: 20px;
+      width: 320px;
+      margin: 0;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      text-align: center;
+      color: white;
+    }
+
+    label {
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--label-color);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: white;
+    }
+
+    input:focus {
+      border-color: var(--button-bg);
+      outline: none;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background: var(--button-bg);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: var(--button-hover-bg);
+    }
+
+    #status {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--success-color);
+      text-align: center;
+    }
+
+    .modern-checkbox {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: var(--label-color);
+      gap: 8px;
+      margin-top: 16px;
+      user-select: none;
+      position: relative;
+    }
+
+    .modern-checkbox input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+
+    .modern-checkbox .checkmark {
+      height: 18px;
+      width: 18px;
+      background-color: var(--input-bg);
+      border: 1px solid var(--input-border);
+      border-radius: 6px;
+      display: inline-block;
+      position: relative;
+      transition: all 0.2s;
+    }
+
+    .modern-checkbox input:checked + .checkmark::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .modern-checkbox input:focus + .checkmark {
+      outline: 2px solid var(--button-bg);
+    }
+  </style>
+</head>
+<body>
+  <h3>⚡ LLM Config</h3>
+
+  <label for="endpoint">🌐 API Endpoint</label>
+  <input id="endpoint" type="text" value="https://openrouter.ai/api/v1" placeholder="https://openrouter.ai/api/v1" />
+
+  <label for="model">🤖 Model</label>
+  <input id="model" type="text" value="mistralai/mistral-small-3.2-24b-instruct:free" placeholder="mistralai/mistral-small-3.2-24b-instruct:free" />
+
+  <label for="apikey">🔐 API Key</label>
+  <input id="apikey" type="password" placeholder="sk-..." />
+
+  <label class="modern-checkbox">
+    <input type="checkbox" id="copyToClipboard" />
+    <span class="checkmark"></span>
+    📋 Copy response to clipboard
+  </label>
+
+  <button id="save">💾 Save Settings</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
