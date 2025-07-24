@@ -42,10 +42,12 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   const command = COMMANDS[info.menuItemId];
   if (!command) return;
 
+  const { apiKey, apiEndpoint, model, copyToClipboard, customPrompt } = await loadSettings();
+  
+  if (info.menuItemId === 'custom') command.prompt = customPrompt;
+
   const selectedText = info.selectionText;
   const prompt = command.prompt;
-
-  const { apiKey, apiEndpoint, model, copyToClipboard } = await loadSettings();
 
   if (!apiKey) {
     chrome.scripting.executeScript({

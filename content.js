@@ -44,20 +44,32 @@ function showLLMResponse(responseText, originalText, mode) {
     word-break: break-word;
   `;
 
-  popup.innerHTML = `
-    <div style="font-weight:bold; margin-bottom: 10px;">${title}</div>
-    <div>${contentHTML}</div>
-    <button style="
-      position: absolute;
-      top: 6px;
-      right: 8px;
-      background: transparent;
-      border: none;
-      color: #fff;
-      font-size: 20px;
-      cursor: pointer;
-    " onclick="document.getElementById('llm-result-popup').remove()">×</button>
+  // Title and content
+  const titleEl = document.createElement("div");
+  titleEl.style.fontWeight = "bold";
+  titleEl.style.marginBottom = "10px";
+  titleEl.innerText = title;
+
+  const contentEl = document.createElement("div");
+  contentEl.innerHTML = contentHTML;
+
+  const closeBtn = document.createElement("button");
+  closeBtn.innerText = "×";
+  closeBtn.style.cssText = `
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
   `;
+  closeBtn.addEventListener("click", () => popup.remove());
+
+  popup.appendChild(titleEl);
+  popup.appendChild(contentEl);
+  popup.appendChild(closeBtn);
 
   document.body.appendChild(popup);
   setTimeout(() => popup.remove(), 20000);
