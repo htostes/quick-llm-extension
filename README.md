@@ -1,9 +1,9 @@
 <div id="top">
 
+# QUICK LLM
+
 <!-- HEADER STYLE: COMPACT -->
 <img src="icons/logo.svg" width="10%" align="left" style="margin-right: 15px">
-
-# QUICK-LLM-EXTENSION
 
 <em>AI power, instantly in any text.</em>
 
@@ -19,6 +19,8 @@
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=plastic&logo=JavaScript&logoColor=black" alt="JavaScript">
 
 <br clear="left"/>
+
+</div>
 
 ## ⚛️ Table of Contents
 
