@@ -2,8 +2,8 @@ export function loadSettings() {
   return new Promise((resolve) => {
     chrome.storage.local.get(["apiEndpoint", "model", "apiKey", "copyToClipboard", "customPrompt"], (config) => {
       resolve({
-        apiEndpoint: config.apiEndpoint || "https://openrouter.ai/api/v1",
-        model: config.model || "mistralai/mistral-small-3.2-24b-instruct:free",
+        apiEndpoint: config.apiEndpoint || '',
+        model: config.model || '',
         apiKey: config.apiKey || null,
         copyToClipboard: config.copyToClipboard || false,
         customPrompt: config.customPrompt || ''

@@ -27,6 +27,9 @@
       padding: 20px;
       width: 320px;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
     }
 
     h3 {
@@ -46,7 +49,7 @@
       color: var(--label-color);
     }
 
-    input {
+    input, select, textarea {
       width: 100%;
       padding: 10px 12px;
       background: var(--input-bg);
@@ -54,9 +57,10 @@
       border-radius: 8px;
       font-size: 0.9rem;
       color: white;
+      font-family: inherit;
     }
 
-    input:focus {
+    input:focus, select:focus, textarea:focus {
       border-color: var(--button-bg);
       outline: none;
     }
@@ -132,52 +136,51 @@
       outline: 2px solid var(--button-bg);
     }
 
-    textarea {
-      width: 100%;
-      padding: 10px 12px;
-      background: var(--input-bg);
-      border: 1px solid var(--input-border);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      color: white;
-      resize: vertical;
-      font-family: sans-serif;
-      box-sizing: border-box;
+    .hidden {
+      display: none;
     }
 
-    textarea:focus {
-      border-color: var(--button-bg);
-      outline: none;
+    .kofi-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: auto;
+      margin-bottom: 20px;
     }
 
     .kofi-wrapper img {
       height: 36px;
       border: none;
-      display: block;
-    }
-
-    .kofi-wrapper {
-      display: inline-block;
-      height: 36px;
-      line-height: 36px;
     }
   </style>
 </head>
-<body style="display: flex; flex-direction: column; height: 100vh; max-height: 640px; padding: 20px; width: 320px; margin: 0; background: var(--bg-color); color: var(--text-color); font-family: 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;">
-
+<body>
   <div style="flex-grow: 1; display: flex; flex-direction: column;">
     <h3>⚡ LLM Config</h3>
 
-    <label for="endpoint">🌐 API Endpoint</label>
-    <input id="endpoint" type="text" value="https://openrouter.ai/api/v1" placeholder="https://openrouter.ai/api/v1" />
+    <label for="provider">🌍 Provider</label>
+    <select id="provider">
+      <option value="">Select provider</option>
+      <option value="openai">OpenAI</option>
+      <option value="google">Google</option>
+      <option value="openrouter">OpenRouter</option>
+      <option value="custom">Custom</option>
+    </select>
 
-    <label for="model">🤖 Model</label>
-    <input id="model" type="text" value="mistralai/mistral-small-3.2-24b-instruct:free" placeholder="mistralai/mistral-small-3.2-24b-instruct:free" />
+    <div id="endpoint-container" class="hidden">
+      <label for="endpoint">🌐 API Endpoint</label>
+      <input id="endpoint" type="text" placeholder="https://your-api.com" />
+    </div>
+
+    <div id="model-container" class="hidden">
+      <label for="model">🤖 Model</label>
+      <input id="model" type="text" placeholder="Model name..." list="modelList" />
+      <datalist id="modelList"></datalist>
+    </div>
 
     <label for="apikey">🔐 API Key</label>
     <input id="apikey" type="password" placeholder="sk-..." />
 
-    <label>✍️ Custom Prompt</label>
+    <label>✨ Custom Prompt</label>
     <textarea id="customPrompt" rows="4" placeholder="Type your custom LLM prompt here..."></textarea>
 
     <label class="modern-checkbox">
@@ -188,16 +191,15 @@
 
     <button id="save">💾 Save Settings</button>
   </div>
+
   <div id="status"></div>
 
-  <div style="display: flex; justify-content: center; margin-top: auto; margin-bottom: 50px;">
+  <div class="kofi-wrapper">
     <a href="https://ko-fi.com/I2I31IJ3HP" target="_blank">
-      <img height="36" style="border:0;" src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Buy Me a Coffee at ko-fi.com" />
+      <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Buy Me a Coffee" />
     </a>
   </div>
 
-
   <script src="popup.js"></script>
 </body>
-
 </html>
