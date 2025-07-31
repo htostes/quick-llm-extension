@@ -36,11 +36,7 @@
     -   [💠 Prerequisites](#-prerequisites)
     -   [🔷 Installation](#-installation)
     -   [🔹 Usage](#-usage)
-    -   [🔸 Testing](#-testing)
--   [🌀 Roadmap](#-roadmap)
--   [✴ ️ Contributing](#-contributing)
 -   [⭐ License](#-license)
--   [✧ Acknowledgments](#-acknowledgments)
 
 </details>
 
@@ -233,7 +229,7 @@ Run the project with:
 
 echo 'INSERT-RUN-COMMAND-HERE'
 
-### 🔸 Testing
+<!-- ### 🔸 Testing
 
 Quick-llm-extension uses the {**test_framework**} test framework. Run the test suite with:
 
@@ -289,6 +285,7 @@ echo 'INSERT-TEST-COMMAND-HERE'
    </a>
 </p>
 </details>
+ -->
 
 ---
 
@@ -296,18 +293,10 @@ echo 'INSERT-TEST-COMMAND-HERE'
 
 Quick-llm-extension is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
----
+## [![][back-to-top]](#top)
 
-## ✧ Acknowledgments
+<!-- ## ✧ Acknowledgments
 
--   Credit `contributors`, `inspiration`, `references`, etc.
-
-<div align="right">
-
-[![][back-to-top]](#top)
-
-</div>
+-   Credit `contributors`, `inspiration`, `references`, etc. -->
 
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
-
----
