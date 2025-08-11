@@ -8,6 +8,8 @@
 
 [![Available in the Chrome Web Store](https://img.shields.io/badge/Add%20to%20Chrome-4285F4?logo=google-chrome&logoColor=white&style=for-the-badge&color=blueviolet)](https://chrome.google.com/webstore/detail/fkgkmfghdnniolojflnpmhdibhnapilp)
 
+[![Buy me a Coffe](https://img.shields.io/badge/Buy%20Me%20a%20Coffe-4285F4?logo=kofi&logoColor=white&style=for-the-badge&color=blueviolet)](https://ko-fi.com/I2I31IJ3HP)
+
 <img src="https://img.shields.io/github/license/htostes/quick-llm-extension?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=blueviolet" alt="license">
 <img src="https://img.shields.io/github/last-commit/htostes/quick-llm-extension?style=for-the-badge&logo=git&logoColor=white&color=blueviolet" alt="last-commit">
 <img src="https://img.shields.io/github/languages/top/htostes/quick-llm-extension?style=for-the-badge&color=blueviolet" alt="repo-top-language">
