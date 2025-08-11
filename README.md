@@ -12,11 +12,6 @@
 <img src="https://img.shields.io/github/license/htostes/quick-llm-extension?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=blueviolet" alt="license">
 <img src="https://img.shields.io/github/last-commit/htostes/quick-llm-extension?style=for-the-badge&logo=git&logoColor=white&color=blueviolet" alt="last-commit">
 <img src="https://img.shields.io/github/languages/top/htostes/quick-llm-extension?style=for-the-badge&color=blueviolet" alt="repo-top-language">
-<img src="https://img.shields.io/github/languages/count/htostes/quick-llm-extension?style=for-the-badge&color=blueviolet" alt="repo-language-count">
-
-<em>Built with:</em>
-<img src="https://img.shields.io/badge/JSON-000000.svg?style=for-the-badge&logo=JSON&logoColor=white" alt="JSON">
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black" alt="JavaScript">
 
 <br clear="left"/>
 
