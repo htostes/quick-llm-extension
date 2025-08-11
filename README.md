@@ -15,7 +15,6 @@
 <img src="https://img.shields.io/github/languages/count/htostes/quick-llm-extension?style=for-the-badge&color=blueviolet" alt="repo-language-count">
 
 <em>Built with:</em>
-
 <img src="https://img.shields.io/badge/JSON-000000.svg?style=for-the-badge&logo=JSON&logoColor=white" alt="JSON">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black" alt="JavaScript">
 
