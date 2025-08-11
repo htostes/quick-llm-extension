@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Quick LLM",
+    "name": "Quick LLM: Free, Provider-Agnostic AI Commands on Any Text",
     "description": "Get instant, inline AI responses on any webpage with two clicks. Right-click to send selected text to an LLM.",
     "version": "1.0",
     "icons": {
